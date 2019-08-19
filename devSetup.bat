@@ -45,7 +45,8 @@ set apps[36]=golang
 set apps[37]=filezilla
 set apps[38]=postgresql
 set apps[39]=pgadmin3
-set len=40
+set apps[40]=evernote
+set len=41
 set npm[0]=create-react-app 
 set npm[1]=foundation-cli 
 set npm[2]=@angular/cli 
@@ -74,7 +75,7 @@ echo  firefox, googler, cygwin, httrack, git, nodejs, vscode, postman, bitnami-x
 echo  mysql.workbench, mongodb, docker-cli, jdk8, composer, notepadplusplus, vlc,
 echo  skype, deluge, discord, dropbox, irfanview, googlechrome, slack, franz, cmake,
 echo  opera, arduino, codelite, flutter, youtube-dl, golang, filezilla, postgresql
-echo  pgadmin3.
+echo  pgadmin3, evernote.
 echo.
 call :ColorText 0b "  NPM Packages"
 REM call :ColorText 4b "  NPM Packages"
