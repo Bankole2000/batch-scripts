@@ -39,19 +39,26 @@ set apps[30]=cmake
 set apps[31]=opera
 set apps[32]=arduino
 set apps[33]=codelite
-set len=33
+set apps[34]=flutter
+set apps[35]=youtube-dl
+set apps[36]=golang
+set apps[37]=filezilla
+set apps[38]=postgresql
+set apps[39]=pgadmin3
+set len=40
 set npm[0]=create-react-app 
 set npm[1]=foundation-cli 
 set npm[2]=@angular/cli 
-set npm[3]=@vue/cli 
-set npm[4]=netlify-cli
-set npm[5]=electron
-set npm[6]=localtunnel
-set npm[7]=fkill-cli 
-set npm[8]=now
-set npm[9]=typescript
-set npm[10]=sass
-set nem=11
+set npm[3]=@vue/cli
+set npm[4]=ionic 
+set npm[5]=netlify-cli
+set npm[6]=electron
+set npm[7]=localtunnel
+set npm[8]=fkill-cli 
+set npm[9]=now
+set npm[10]=typescript
+set npm[11]=sass
+set nem=12
 echo.
 call :ColorText 1a " Welcome To Dev Setup Installer - (c)Banky 2019 "
 echo.
@@ -66,14 +73,15 @@ echo  Choco, Cmder, Velocity, Codenotes, python, pycharm-community, androidstudi
 echo  firefox, googler, cygwin, httrack, git, nodejs, vscode, postman, bitnami-xampp,
 echo  mysql.workbench, mongodb, docker-cli, jdk8, composer, notepadplusplus, vlc,
 echo  skype, deluge, discord, dropbox, irfanview, googlechrome, slack, franz, cmake,
-echo  opera, arduino, codelite
+echo  opera, arduino, codelite, flutter, youtube-dl, golang, filezilla, postgresql
+echo  pgadmin3.
 echo.
 call :ColorText 0b "  NPM Packages"
 REM call :ColorText 4b "  NPM Packages"
 echo.
 echo  -------------------
-echo  create-react-app, foundation-cli, @angular/cli, @vue/cli, netlify-cli, electron
-echo  localtunnel, fkill, now, typescript, 
+echo  create-react-app, foundation-cli, @angular/cli, @vue/cli, ionic, netlify-cli, electron
+echo  localtunnel, fkill, now, typescript, sass
 echo. 
 echo  You can choose to Install Everything at once, or Pick which to install/Skip. 
 echo.
@@ -96,37 +104,51 @@ call :ColorText 0b "  [1] Express Install "
 echo   - Just go ahead and install everything
 call :ColorText 0b "  [2] One by one "
 echo   - Let me decide which to install and which to skip
+REM call :ColorText 0b "  [3] Npm Packages only "
+REM echo   - Express Install
 call :ColorText 0b "  [3] Npm Packages only "
-echo   - Express Install
-call :ColorText 0b "  [4] Npm Packages only "
 echo   - One by one
-call :ColorText 0b "  [5] View details "
+call :ColorText 0b "  [4] View details "
 echo   - Descriptions and urls of Apps and NPM packages
-call :ColorText 0b "  [6] List Installed Apps" 
+call :ColorText 0b "  [5] List Installed Apps" 
 echo.
-call :ColorText 0b "  [7] Close Dev Setup "
+call :ColorText 0b "  [6] Close Dev Setup "
 echo.
 echo. 
 set /p input="Please Select an option from the list above: "
 
 if %input%==1 GOTO optionone
 if %input%==2 GOTO optiontwo
-if %input%==3 GOTO optionthree
-if %input%==4 GOTO optionfour
-if %input%==5 GOTO description
-if %input%==6 GOTO listinstalled
-if %input%==7 GOTO conclusion
+REM if %input%==3 GOTO optionthree
+if %input%==3 GOTO optionfour
+if %input%==4 GOTO description
+if %input%==5 GOTO listinstalled
+if %input%==6 GOTO conclusion
 echo.
 echo You haven't entered a valid option. Ctrl+C to cancel or Enter to try again
 pause
 GOTO conclusion
+:installchoco
+cls
+echo    It appears you do not have choco installed on this system
+echo.
+pause
+echo.
+echo    Installing Choco now... Please Rerun this script once choco is done installing
+echo.
+SET DIR=%~dp0%
+::download install.ps1
+%systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "((new-object net.webclient).DownloadFile('https://chocolatey.org/install.ps1','%DIR%install.ps1'))"
+::run installer
+%systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "& '%DIR%install.ps1' %*"
+IF .==. GOTO conclusion
 :optionone
   echo.
   echo You have Selected Option [1] Express Install (Install Everything)
   echo.
   pause
   echo.
-  IF EXIST C:\ProgramData\chocolatey\choco.exe (echo Choco is installed) ELSE (@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin") 
+  IF EXIST C:\ProgramData\chocolatey\choco.exe (echo Choco is installed) ELSE (GOTO installchoco) 
   echo.
   set /a i=0
   :firstloop
@@ -158,7 +180,7 @@ GOTO conclusion
   echo.
   pause
   echo.
-  IF EXIST C:\ProgramData\chocolatey\choco.exe (echo Choco is installed) ELSE (@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin") 
+  IF EXIST C:\ProgramData\chocolatey\choco.exe (echo Choco is installed) ELSE (GOTO installchoco) 
   echo.
   echo.
   set /a i=0
@@ -166,12 +188,13 @@ GOTO conclusion
   IF %i% equ %len% GOTO endsecondloop 
   for /f "usebackq delims== tokens=2" %%j in (`set apps[%i%]`) do (
   cls 
-  echo The next application to be installed is %%j
+  echo The next application to be installed is %%j  - %i% out of %len% apps
   echo.  
-  set /p choice="Install %%j ? (1)Install (2)Skip: "
+  set /p choice="Install %%j ? (1)Install (2)Skip (3)Return to Menu: "
   echo.
   IF !choice!==1 (choco Install %%j --confirm)
   IF !choice!==2 (echo Skipping %%j)
+  IF !choice!==3 (GOTO repeat)
   echo.
   )
   set /a i+=1 
@@ -183,12 +206,13 @@ GOTO conclusion
   IF %a% equ %nem% GOTO endfirstloop 
   for /f "usebackq delims== tokens=2" %%b in (`set npm[%a%]`) do (
   cls 
-  echo The next Npm package to be installed is %%b
+  echo The next Npm package to be installed is %%b - %a% out of %nem% NPM Packages
   echo.  
-  set /p npmchoice="Install %%b ? (1)Install (2)Skip: "
+  set /p npmchoice="Install %%b ? (1)Install (2)Skip (3)Return to Menu: "
   echo.
   IF !npmchoice!==1 (npm install -g %%b --silent)
   IF !npmchoice!==2 (echo Skipping %%b)
+  IF !npmchoice!==3 (GOTO repeat)
   echo.
   )
   set /a a+=1 
@@ -198,7 +222,7 @@ GOTO conclusion
   echo.
   echo You have Selected Option [3] Install NPM Packages globally (Express Install)
   echo.
-  IF EXIST C:\ProgramData\chocolatey\choco.exe (echo Choco is installed) ELSE (@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin") 
+  IF EXIST C:\ProgramData\chocolatey\choco.exe (echo Choco is installed) ELSE (GOTO installchoco) 
   echo.
   IF EXIST "C:\Program Files\nodejs\node.exe" (echo NodeJS is installed) ELSE (choco install nodejs --confirm)
   echo.
@@ -214,9 +238,9 @@ GOTO conclusion
   GOTO conclusion
 :optionfour
   echo.
-  echo You have Selected Option [4] => Install NPM Packages globally (One by One Install - Chose or Skip)
+  echo You have Selected Option [3] => Install NPM Packages globally (One by One Install - Chose or Skip)
   echo.
-  IF EXIST C:\ProgramData\chocolatey\choco.exe (echo Choco is installed) ELSE (@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin") 
+  IF EXIST C:\ProgramData\chocolatey\choco.exe (echo Choco is installed) ELSE (GOTO installchoco) 
   echo.
   set /a a=0
   :npmfour
@@ -224,12 +248,13 @@ GOTO conclusion
   IF %a% equ %nem% GOTO endnpmfour 
   for /f "usebackq delims== tokens=2" %%b in (`set npm[%a%]`) do (
   cls 
-  echo The next Npm package to be installed is %%b 
+  echo The next Npm package to be installed is %%b - %a% out of %nem% NPM Packages
   echo. 
-  set /p npmchoice="Install %%b ? (1)Install (2)Skip: "
+  set /p npmchoice="Install %%b ? (1)Install (2)Skip (3)Return to Menu: "
   echo.
   IF !npmchoice!==1 (npm install -g %%b --silent)
   IF !npmchoice!==2 (echo Skipping %%b)
+  IF !npmchoice!==3 (GOTO repeat)
   echo.
   )
   set /a a+=1 
@@ -272,6 +297,8 @@ echo.
 echo  ---------------------------------
 npm -g ls --depth=0
 echo.
+pause
+echo.
 set /p list="PLEASE SELECT (1)List again (m)Return to Menu (e)Exit: "
 if %list%==1 GOTO listinstalled
 if %list%==m GOTO repeat
@@ -279,7 +306,7 @@ if %list%==e GOTO conclusion
 GOTO concolusion
 :description
 echo.
-echo You selected option [5] View App and Npm Package Descriptions
+echo You selected option [4] View App and Npm Package Descriptions
 echo.
 echo === Descriptions ===
 echo. 
@@ -521,8 +548,7 @@ if %page%==6 GOTO pagesix
 if %page%==p GOTO pagefour
 if %page%==m GOTO repeat
 if %page%==e GOTO conclusion
-GOTO conclusion
-
+GOTO conclusion 
 :ColorText
 echo off
 <nul set /p ".=%DEL%" > "%~2"

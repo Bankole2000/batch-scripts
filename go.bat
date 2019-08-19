@@ -16,11 +16,11 @@ IF "%1"=="system" GOTO system
   GOTO end
 
 :work
-  cd C:\Users\USERPC\Desktop\work
+  cd C:\Users\USERPC\Desktop\work\%2
   GOTO end
 
 :projects
-  cd C:\xampp\htdocs\projects
+  cd C:\xampp\htdocs\projects\%2
   GOTO end
 
 :home
@@ -33,10 +33,10 @@ IF "%1"=="system" GOTO system
 
 :explore
   IF "%2"=="home" (SET home=C:\Users\USERPC\%3)
-  IF "%2"=="drive" (SET home=%3:\)
+  IF "%2"=="drive" (SET home=%3:\%4)
   IF "%2"=="usb" (SET home=%3:\)
-  cd %home%%4
-  %1r %home%%4
+  cd %home%
+  %1r %home%
   GOTO end
 
 :kill 
