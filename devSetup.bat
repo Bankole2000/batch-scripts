@@ -185,7 +185,8 @@ IF .==. GOTO conclusion
   echo.
   echo.
   set /a i=0
-  :secondloop
+:secondloop
+:secondloop
   IF %i% equ %len% GOTO endsecondloop 
   for /f "usebackq delims== tokens=2" %%j in (`set apps[%i%]`) do (
   cls 
