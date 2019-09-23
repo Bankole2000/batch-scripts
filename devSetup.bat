@@ -332,7 +332,7 @@ echo.
 echo  4. Python - A simple and easy to learn high-level general purpose programming language
 echo      Website URL: https://python.org
 echo.
-echo  5. Pycharm-community - An Integrated Development Environment (IDE) for python programming
+echo  5. Pycharm-community - An Integrated Development Environment, IDE for python programming
 echo      Website URL: https://jetbrains.com/pycharm
 echo.
 echo  6. Android Studio - The Official IDE for Android App Development, based on intelliJ IDEA
@@ -365,34 +365,34 @@ if %page%==e GOTO conclusion
 :pagetwo
 cls
 echo ==== Page two ====
-echo  11. Git - A simple and easy to learn high-level general purpose programming language
+echo  11. Git - Quintessential Version control system for use with Github and other Online Repositories
 echo      Website URL: https://python.org
 echo.
-echo  12. NodeJS - An awesome alternative Terminal for windows
+echo  12. NodeJS - Essential Javascript Runtime environment for SWE, comes with NPM
 echo      Website URL: https://cmder.net
 echo.
-echo  13. VScode - An offline documentation viewer for windows
+echo  13. VScode - Highly recommended IDE for general purpose programming and SWD
 echo      Website URL: https://velocity.silverlakesoftware.com
 echo.
-echo  14. Postman - A simple and easy to learn high-level general purpose programming language
+echo  14. Postman - Very Useful ADE, API Development Environment, for API testing 
 echo      Website URL: https://python.org
 echo.
-echo  15. Bitnami-Xampp - A simple and easy to learn high-level general purpose programming language
+echo  15. Bitnami-Xampp - All in one Apache, MySQL, PHP and PhpMyAdmin Package by Bitnami
 echo      Website URL: https://python.org
 echo.
-echo  16. MySQL Workbench - A simple and easy to learn high-level general purpose programming language
+echo  16. MySQL Workbench - Workbench for Developing and Testing MySQL Databases
 echo      Website URL: https://python.org
 echo.
-echo  17. MongoDB - A simple and easy to learn high-level general purpose programming language
+echo  17. MongoDB - A Modern, document based, No-SQL Database Management System
 echo      Website URL: https://python.org
 echo.
-echo  18. Docker-CLI - A simple and easy to learn high-level general purpose programming language
+echo  18. Docker-CLI - Docker and Docker Containers command line Interface program
 echo      Website URL: https://python.org
 echo.
-echo  19. JDK8 - A simple and easy to learn high-level general purpose programming language
+echo  19. JDK8 - Java Development Kit, essential for building, developing, and running JAVA based applications
 echo      Website URL: https://python.org
 echo.
-echo  20. Composer - A simple and easy to learn high-level general purpose programming language
+echo  20. Composer - Package Manager for php based packages and dependencies
 echo      Website URL: https://python.org
 echo.
 set /p page="PLEASE SELECT (1-6)Page Number (p)Previous Page (n)Next Page (m)Returm to Menu or (e)Exit: "
@@ -411,28 +411,28 @@ if %page%==e GOTO conclusion
 :pagethree
 cls
 echo ==== Page three ====
-echo  21. NotePad++ - A simple and easy to learn high-level general purpose programming language
+echo  21. NotePad++ - A basic, simple, easy to use Text Editor
 echo      Website URL: https://python.org
 echo.
-echo  22. VLC Media Player - A simple and easy to learn high-level general purpose programming language
+echo  22. VLC Media Player - Most Versatile and dependable Media Player compatible with several codecs and media file types
 echo      Website URL: https://python.org
 echo.
-echo  23. Skype - An awesome alternative Terminal for windows
+echo  23. Skype - Social App for Video Calls and text Communication.
 echo      Website URL: https://cmder.net
 echo.
-echo  24. Deluge - An offline documentation viewer for windows
+echo  24. Deluge - Simple but awesome Torrent Downloader
 echo      Website URL: https://velocity.silverlakesoftware.com
 echo.
-echo  25. Discord - A simple and easy to learn high-level general purpose programming language
+echo  25. Discord - Social Network and Chat app for gamers and Techies.
 echo      Website URL: https://python.org
 echo.
-echo  26. Dropbox - A simple and easy to learn high-level general purpose programming language
+echo  26. Dropbox - Personal Cloud Storage for all kinds of Files
 echo      Website URL: https://python.org
 echo.
 echo  27. irfanview - A simple and easy to learn high-level general purpose programming language
 echo      Website URL: https://python.org
 echo.
-echo  28. Google Chrome - A simple and easy to learn high-level general purpose programming language
+echo  28. Google Chrome - The worlds' best browser. Period.
 echo      Website URL: https://python.org
 echo.
 echo  29. Slack - A simple and easy to learn high-level general purpose programming language
