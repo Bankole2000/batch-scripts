@@ -10,6 +10,8 @@ IF "%1"=="explore" GOTO explore
 IF "%1"=="kill" GOTO kill
 IF "%1"=="getpic" GOTO getpic
 IF "%1"=="system" GOTO system 
+IF "%1"=="pirple" GOTO pirple
+IF "%1"=="learning" GOTO learning
 
 :scripts
   cd C:\apps\scripts
@@ -24,7 +26,7 @@ IF "%1"=="system" GOTO system
   GOTO end
 
 :home
-  cd C:\Users\USERPC\%2
+  cd %USERPROFILE%\%2
   GOTO end
 
 :drive
@@ -32,12 +34,22 @@ IF "%1"=="system" GOTO system
   GOTO end
 
 :explore
-  IF "%2"=="home" (SET home=C:\Users\USERPC\%3)
+  IF "%2"=="home" (SET home=%USERPROFILE%\%3)
   IF "%2"=="drive" (SET home=%3:\%4)
   IF "%2"=="usb" (SET home=%3:\)
+  IF "%2"=="pirple" (SET home=C:\projects\learning\pirple\%3)
+  IF "%2"=="learning" (SET home=C:\projects\learning\%3)
   cd %home%
   %1r %home%
   GOTO end
+
+:pirple
+  cd C:\projects\learning\pirple\%3
+  GOTO end
+
+:learning
+  cd C:\projects\learning\%3
+  GOTO end  
 
 :kill 
   taskkill /im %2.exe /t /f
