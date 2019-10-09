@@ -11,13 +11,13 @@ set apps[2]=code-notes
 set apps[3]=git
 set apps[4]=github-desktop 
 set apps[5]=nodejs  
-set apps[6]=firefox 
-set apps[7]=googler 
-set apps[8]=cygwin 
+set apps[6]=vscode 
+set apps[7]=python 
+set apps[8]=pycharm-community 
 set apps[9]=httrack 
-set apps[10]=python 
+set apps[10]=googler 
 set apps[11]=androidstudio 
-set apps[12]=vscode 
+set apps[12]=franz 
 set apps[13]=postman 
 set apps[14]=bitnami-xampp 
 set apps[15]=mysql.workbench 
@@ -34,7 +34,7 @@ set apps[25]=dropbox
 set apps[26]=irfanview 
 set apps[27]=googlechrome 
 set apps[28]=slack 
-set apps[29]=franz
+set apps[29]=firefox
 set apps[30]=cmake
 set apps[31]=opera
 set apps[32]=arduino
@@ -46,7 +46,7 @@ set apps[37]=filezilla
 set apps[38]=postgresql
 set apps[39]=pgadmin3
 set apps[40]=evernote
-set apps[41]=pycharm-community
+set apps[41]=cygwin
 set apps[42]=ramme
 set apps[43]=tusk
 set len=44
@@ -74,11 +74,11 @@ call :ColorText 0b "  Applications"
 echo.
 echo  -------------------
 echo  Choco, Cmder, Velocity, Codenotes, python, pycharm-community, androidstudio
-echo  firefox, googler, cygwin, httrack, git, nodejs, vscode, postman, bitnami-xampp,
+echo  firefox, googler, cygwin, httrack, git, github-desktop, nodejs, vscode, postman, bitnami-xampp,
 echo  mysql.workbench, mongodb, docker-cli, jdk8, composer, notepadplusplus, vlc,
 echo  skype, deluge, discord, dropbox, irfanview, googlechrome, slack, franz, cmake,
 echo  opera, arduino, codelite, flutter, youtube-dl, golang, filezilla, postgresql
-echo  pgadmin3, evernote.
+echo  pgadmin3, evernote, ramme, tusk.
 echo.
 call :ColorText 0b "  NPM Packages"
 REM call :ColorText 4b "  NPM Packages"
