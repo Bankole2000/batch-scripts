@@ -18,7 +18,7 @@ IF "%1"=="learning" GOTO learning
   GOTO end
 
 :work
-  cd C:\Users\USERPC\Desktop\work\%2
+  cd %USERPROFILE%\Desktop\work\%2
   GOTO end
 
 :projects
@@ -35,6 +35,7 @@ IF "%1"=="learning" GOTO learning
 
 :explore
   IF "%2"=="home" (SET home=%USERPROFILE%\%3)
+  IF "%2"=="work" (SET home=%USERPROFILE%\Desktop\work\%3)
   IF "%2"=="drive" (SET home=%3:\%4)
   IF "%2"=="usb" (SET home=%3:\)
   IF "%2"=="pirple" (SET home=C:\projects\learning\pirple\%3)
@@ -44,11 +45,11 @@ IF "%1"=="learning" GOTO learning
   GOTO end
 
 :pirple
-  cd C:\projects\learning\pirple\%3
+  cd C:\projects\learning\pirple\%2
   GOTO end
 
 :learning
-  cd C:\projects\learning\%3
+  cd C:\projects\learning\%2
   GOTO end  
 
 :kill 
