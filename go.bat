@@ -11,6 +11,7 @@ IF "%1"=="kill" GOTO kill
 IF "%1"=="getpic" GOTO getpic
 IF "%1"=="system" GOTO system 
 IF "%1"=="pirple" GOTO pirple
+IF "%1"=="lambda" GOTO lambda
 IF "%1"=="learning" GOTO learning
 
 :scripts
@@ -48,6 +49,10 @@ IF "%1"=="learning" GOTO learning
   cd C:\projects\learning\pirple\%2
   GOTO end
 
+:lambda
+  cd C:\projects\learning\lambda\%2
+  GOTO end
+
 :learning
   cd C:\projects\learning\%2
   GOTO end  
@@ -60,7 +65,7 @@ IF "%1"=="learning" GOTO learning
   GOTO end
 
 :getpic
-  copy %localAppData%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\ C:\Users\USERPC\Pictures\images\
+  echo n | copy /-y %localAppData%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\ C:\Users\USERPC\Pictures\images\
   cd C:\Users\USERPC\Pictures\images
   ren *.* *.jpg
   explorer "C:\Users\USERPC\Pictures\images"
