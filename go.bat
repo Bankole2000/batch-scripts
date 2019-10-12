@@ -65,7 +65,7 @@ IF "%1"=="learning" GOTO learning
   GOTO end
 
 :getpic
-  echo n | copy /-y %localAppData%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\ C:\Users\USERPC\Pictures\images\
+  xcopy /D %localAppData%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\ C:\Users\USERPC\Pictures\images\
   cd C:\Users\USERPC\Pictures\images
   ren *.* *.jpg
   explorer "C:\Users\USERPC\Pictures\images"

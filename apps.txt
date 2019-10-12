@@ -1,0 +1,7 @@
+*******************************************
+
+DEVSETUP APP DESCRIPTIONS - (c) 2019 Banky
+____________________________________________
+
+Here's a brief description of all the apps that
+can be installed using the DevSetup Installer 

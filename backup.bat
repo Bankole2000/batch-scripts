@@ -69,18 +69,17 @@ IF "%1"=="all" GOTO all
 :help
   echo. 
   echo Commands for the Browse Script
-  echo  backup  { open chrome }
-  echo  backup ^<url^>  { open url in chrome } 
-  echo  backup web ^<website.com^> { open website in chrome with https }
-  echo  backup xlocal ^<foldername^> { Startup Xampp and open localhost:\projects\foldername in chrome }
-  echo  backup local ^<foldername^> { open localhost:\projects\foldername in chrome }
-  echo  backup search ^<search words up to 9^> { open googler search results for search terms in chrome }
-  echo  backup close { exit/close all instances of chrome }
-  echo  backup httrack { Open httrack downloaded websites }
-  echo  backup here { open current directory in chrome browser }
-  echo  backup pirple { open Pirple in browser and navigate to pirple directory }
-  echo  backup lambda { open Lambda School in browser and navigate to lambda directory }
-  echo  backup help { show this help menu }
-  GOTO end
+  echo  backup            - first time to backup all files, Subsequent (update all files)
+  echo  backup work       - backup work files  
+  echo  backup websites   - backup website files
+  echo  backup documents  - backup documents files
+  echo  backup scripts    - backup scripts files
+  echo  backup apps       - backup app shortcuts
+  echo  backup pictures   - backup pictures files
+  echo  backup videos     - backup videos files
+  echo  backup downloads  - backup downloads files
+  echo  backup xprojects  - backup projects in the htdocs files
+  echo  backup projects   - backup projects file in C:\projects
+  echo  backup help       - Display this help text
 
 :end

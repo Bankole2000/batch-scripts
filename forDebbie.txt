@@ -1,0 +1,189 @@
+*********************************************
+Recommended Apps for Debora - (c) 2019 Banky 
+---------------------------------------------
+
+First words
+------------
+Following our whatsapp discussions, I felt it 
+might be helpful for you to have a list of all
+the apps (with descriptions and a little how 
+to use) that I figured you might find useful 
+that you can install using the DevSetup script. 
+
+Some are essential (like, how did I live Without
+them before now, lol), some I highly recommend, 
+and others have specific uses and applications 
+that you might find useful in other areas, 
+but generally, as you grow you'll come 
+to find that most of them come in handy at 
+certain points in time, depending on which path 
+you decide to take on your programming journey.
+
+NOTE: If you see an app while the script is running
+but don't see the app on this list, then 
+it's because I feel you don't need it yet or it would
+take up too much data (or you probably already have it
+installed, like firefox for e.g) so you can ask me 
+about it or look it up online if you want to.  
+
+Without Further ado - The List.
+
+The List
+-----------
+
+I.   Cmder (Essential):
+    An alternative Terminal for windows that also
+    has linux/unix commands built in
+    How to use: open the command line (as administrator)
+    and type 'cmder' and hit the 'enter' key.
+    Pro-Tip: you can also place a shortcut in the start
+    menu or (what I personally use) have shortcut keys to 
+    open it directly/quickly
+
+II.  Velocity (Essential):
+    A docset manager that enables you view programming
+    documentation offline for several different languages
+    How to use: Once installed, start the program (should
+    be in the start menu) click the "Add / Download"
+    button. Select the languages you wish to download (for
+    you I'd recommend HTML, CSS and JS), and click the
+    download button to the right of each of them. Once 
+    downloaded, you can click the blue arrow at the top left
+    of the app window to view the downloaded docsets - Highly
+    useful.
+
+III. Code Notes (Essential):
+    A code snippets manager. As you learn, you'll most likely
+    forget a lot of things, especially solutions you may 
+    find in places like stackoverflow or w3schools. So it's
+    nice to have a place where you can just store code snippets
+    for later use. That's basically what code notes is.
+    How to use: The app is pretty straight forward. 
+
+IV.  Git (Essential):
+    An open source distributed version control system. 
+    Every serious developer uses git. Install it asap,
+    and while you're at it, open a github account if you 
+    don't have one yet.
+    How to use: Ask me, I'll gladly teach you.
+
+V.   Github Desktop (Highly Recommend):
+    GUI Desktop Client for Github. 
+    How to use: Once installed, run the app, there's a 
+    welcome tutorial on there. 
+
+VI.  NodeJS (Essential):
+    A Javascript runtime environment built on google chrome's
+    V8 engine. It's the present (and future) of programming. 
+    How to use: Just install it first. We'll get to this later.
+
+VII. VSCode (Essential):
+    Awesome opernsource Text Editor/IDE by Microsoft. You 
+    probably already have this installed so you should skip
+    How to use: D'uh??? but there's a lot more to it though, 
+    like the integrated terminal, intellisense and Emmet and
+    1001 extensions. 
+
+VIII.Python (Highly Recommend):
+    Even if you don't want to learn python, just install it. 
+    It's not that heavy, but it's really handy and a lot of 
+    other useful apps will run on it.
+
+IX.  httrack (Highly Recommend):
+    For Downloading websites. Some docsets (like MaterializeCSS
+    for instance), don't come with velocity, so this is for when
+    you need to keep an online reference/resource offline.
+    How to use: Just run the app, it's pretty self explanatory
+
+X.   Googler (Highly Recommend):
+    For running google search in the command line. Sometimes I 
+    might be working in the terminal, and I just want to check
+    something quick without opening a browser. Googler is
+    perfect for that. Runs on python (told you python would
+    come in handy)
+    How to use: in the terminal (cmd or cmder), just run the 
+    command "googler <whatever you want to google/search for>"
+    e.g. googler what is the meaning of life
+
+XI.  Franz (Essential):
+    All your communication channels/apps in one place on your computer. 
+    How to use: Once installed, run the app, then add services
+    you can add whatsapp, facebook messenger, linkedIn, twitter, 
+    telegram, slack, even github, among many others. 
+
+XII. Bitnami-Xampp (Essential): 
+    You're going to want to get into backend development at
+    some point and I feel PHP-MySQL is a good place to start. 
+
+XIII. Notepad++ (If you want to):
+    Sometimes I just want to quickly look at some code, or 
+    some other text file without opening up VSCode (coz it's
+    a bit heavy), so I use this instead. 
+    How to use: It's basically Notepad with multiple tabs?
+
+XIV.  VLC Player (Essential): No explanation needed
+
+XV.   Deluge (Highly Recommend): 
+    A Cool, simple but very powerful torrent client. No Ads, no 
+    BS, just get your torrents. 
+
+XVI. Discord (If you want to):
+    It's kind of like a social network, but much cooler. I teach
+    webdev and other stuff on there, and many youtubers have 
+    discord servers so you'll need it if you want to join their
+    servers. 
+    How to use: When you install it, let me know, I'll walk you 
+    through it.
+
+XVII. Dropbox (Highly Recommend):
+    Cloud storage app. Very popular, you might have heard of it
+    before, lol. 
+    How to use: It's basically google drive without the hassle
+
+XVIII. Youtube-dl (Highly Recommend):
+    As you grow, you'll soon come to find that the fastest way 
+    to do anything on a computer is through the command line, 
+    especially downloading/uploading files. This is for downloading
+    youtube videos (and playlists and from other websites as well)
+    How to use: in the command line run the following commands
+    "youtube-dl <url/link to youtube video>"
+    e.g. youtube-dl https://youtu.be/-3igNThTdqM 
+    or to view help files run youtube-dl --help 
+
+XIX. Filezilla (Highly Recommend):
+    for basic FTP and SFTP (File transfer Protocol and SSH
+    File Transfer Protocol). Basically for uploading and downloading
+    files to and from your hosting easily and quickly.
+
+XX.  MailSpring (If you want to):
+    For managing multiple email boxes in one place. personally
+    I have like, what, 9 email addresses? (but I'm not a yahoo
+    boy I swear, like, for real, lol). I just like to have 
+    seperate mail boxes for different purposes. 
+
+XXI. Screenpresso (Highly Recommend):
+    For taking screenshots and screen video recordings. 
+
+XXII. Slack (Highly Recommend):
+    It's honestly not the best communication app, but most 
+    companies and tech groups use it (Andela, Lambda schools etc)
+    so just install it for their sakes, lol.
+
+XXIII. Ramme (If you want to):
+    Basically Instagram on your desktop. 
+    I used to do social media marketing quite a while ago and it
+    was such a pain uploading stuff coz I had to copy it to my phone
+    first then etc blah blah. Ramme helps solve that problem.
+
+
+Final words
+------------
+
+Hope the above list, the devSetup.bat script and the apps 
+themselves prove useful to you Deborah.
+Can't wait to see you go above and beyond on your 
+programming journey.
+
+________________________________________
+
+END OF FILE - Version 1.0 (c) 2019 Banky
