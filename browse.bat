@@ -58,6 +58,7 @@ IF "%1"=="pirple" GOTO pirple
 
 :lambda
   chrome "https://apply.lambdaschool.com"
+  chrome "https://repl.it/classroom/invite/4iP01vA"
   call go lambda
   GOTO end
 

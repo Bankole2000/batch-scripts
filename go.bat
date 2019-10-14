@@ -65,11 +65,11 @@ IF "%1"=="learning" GOTO learning
   GOTO end
 
 :getpic
-  xcopy /D %localAppData%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\ C:\Users\USERPC\Pictures\images\
-  cd C:\Users\USERPC\Pictures\images
+  xcopy %localAppData%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets %USERPROFILE%\Pictures\images /D /Q
+  cd %USERPROFILE%\Pictures\images
   ren *.* *.jpg
-  explorer "C:\Users\USERPC\Pictures\images"
-  clear
+  explorer "%USERPROFILE%\Pictures\images"
+  
   GOTO end
 
 :system
