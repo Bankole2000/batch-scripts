@@ -13,6 +13,7 @@ IF "%1"=="system" GOTO system
 IF "%1"=="pirple" GOTO pirple
 IF "%1"=="lambda" GOTO lambda
 IF "%1"=="learning" GOTO learning
+IF "%1"=="pluralsight" GOTO pluralsight
 
 :scripts
   cd C:\apps\scripts
@@ -47,6 +48,10 @@ IF "%1"=="learning" GOTO learning
 
 :pirple
   cd C:\projects\learning\pirple\%2
+  GOTO end
+
+:pluralsight
+  cd C:\projects\learning\pluralsight\%2
   GOTO end
 
 :lambda

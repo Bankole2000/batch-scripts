@@ -11,6 +11,7 @@ IF "%1"=="here" GOTO here
 IF "%1"=="help" GOTO help
 IF "%1"=="lambda" GOTO lambda
 IF "%1"=="pirple" GOTO pirple
+IF "%1"=="pluralsight" GOTO pluralsight
 
 :openchrome
   chrome %2
