@@ -7,5 +7,10 @@ WIN + Up Arrow / Down Arrow => Maximize / Minimize Current window
 WIN + Left Arrow / Right Arrow => shift window to the left or right
 CTRL + Tab => Move to next tab in chrome
 CTRL + Shift + Tab => Move to previous tab in chrome 
+Win + ";" => Emoji Picker
 
-
+To download videos from youtube
+youtube-dl <URL> -> download video from youtube
+youtube-dl --yes-playlist <URL?list=listcodenam> -> download video playlist from youtube 
+youtube-dl -F <URL> -> Get video formats (and audio)
+youtube-dl -f 250 <URL> -> download audio only from youtube video

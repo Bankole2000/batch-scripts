@@ -13,6 +13,7 @@ IF "%1"=="help" GOTO help
 IF "%1"=="documents" GOTO documents
 IF "%1"=="all" GOTO all
 IF "%1"=="restore" GOTO restore
+IF "%1"=="getvids" GOTO getvids
 
 :bkupall
   xcopy /D "%USERPROFILE%\Desktop\work" /e "D:\backup\work"
@@ -70,6 +71,10 @@ IF "%1"=="restore" GOTO restore
 :restore
   IF EXIST C:\apps (echo File path exists) ELSE (mkdir C:\apps\scripts)
   xcopy /D "D:\backup\apps" /B /E "C:\apps\scripts"
+  GOTO end
+
+:getvids
+  xcopy /D "D:\backup\projects\videos" /e "C:\projects\resources\videos"
   GOTO end
 
 :help
