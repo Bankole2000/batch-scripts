@@ -1,0 +1,70 @@
+How to use Task Warrior 
+How to Install - 
+android - install termux from google play - run pkg update, pkg upgrade, termux-setup-storage
+to sync - follow instructions on freecinc.com
+
+params: +tag, -tag, recur:weekly, due:due-date, project:projectName, start:date, end:date, entry:date
+  depends:id, status:completed/pending, scheduled:date, wait:datetillpending, until:dateexpired, 
+  description:descriptiontext, 
+search: active, all, blocked, blocking, completed, list,  
+Commands
+
+$ task list <task ID || P > => list all tasks, all pending tasks (P) or a specific task ID
+$ task all => list all tasks (pending, started and completed)
+$ task status:completed all => list all completed tasks
+$ task reports => shows a list of all the reports you can generate
+   burndown.daily, burndown.monthly, burndown.weekly, calendar, summary, timesheet, history.monthly, 
+   history.annual, ghistory.annual, ghistory.monthly, information, 
+$ task info || show || information=> shows a detailed list of all tasks
+$ task 1 3 5-10 => lists tasks by ID (single or multiple)
+$ task delete <id> => change task status to deleted
+$ task <id> purge => completely removes task
+$ task <id> start => starts task with id
+$ task undo => undo last modification/change
+$ task <id> edit => opens editor to edit task
+ - add
+$ task add <insert task here> => adds a new task
+$ task add "<insert task here>" => adds a new task preventing key words from other execution
+$ task add project:<projectName> priority:H <task> => adds a new task and sets project and priority
+// Note that you can't add multi-line texts, just a single line
+$ task 1 done <was done by itself> => marks task as complete adding annotation and end:date
+$ task 1 done -important +tag /teh/the => edits made to task while marking as complete
+$ task <id> export rc.json.array=off||on => export task as json if json on or off, no id export all
+$ task _get 12.status => extract any piece of information stored by taskwarrior, eg status, uuid, 
+  description, project, priority, start, end, modified, recur
+  
+
+$ task log <insert task> => adds a task in the completed state
+$ task log <task> start:2019-02-05 end:2019-02-06 => logs a task with start and end dates
+$ task log <task> +<tag1> +<tag2> => adds tasks with tags 
+
+$ task 1 append "insert task appendage" => adds to the description of a task (task 1 in this case)
+$ task 1 prepend "insert task prependate" => adds to the beginning of a description of a task
+$ task 1 modify "insert new task description" => Changes/modifies the description of a task
+$ task 1 3 5-10 modify -home +garden => modifies task 1, 3, and 5 - 10 tags (remove home add garden) 
+$ task 1 modify /teh/the => modifies task 1 changing "teh" to "the" in the description
+$ task 1 modify +tag /from/to/ project:New priority:H depends:2 due:tomorrow recur:weekly new text
+ add tag, change from to to, change/add project, priority, dependency, due date, recurrence and description
+$ task \( project:outdoors or /planting/ \) modify -home +garden => modify tasks matching filters
+ 
+$ task calc <1+2*3> => performs calculations including ^, %, and, or, xor, ==, !==, =, !=, !,
+  ~ (matches or contains eg 'quick' ~ 'q' returns true), !~, <=, <, >=, and >, + can also concatenate
+$ task calc now || tomorrow + 2weeks - 1d || 12h + 25m +30s || eoy - eom || 1.urgency || 1.entry.week
+  || 
+$ task <context> count => counts tasks matching the context. if no context, counts all pending tasks
+$ task status:pending count => counts all pending tasks
+$ task _unique <context> => returns filtered list of unique values for given attribute/context
+  e.g task _unique project || tags => returns list of unique values of projects or tags
+
+Context - This has to do with categorizing and seperating tagged or filtered tasks
+$ task context define <name of context> +tag or +tag or +tag => define context by if has any options
+e.g. $ task context define work +labview or +work or +office or +lab or +bluetooth
+$ task context define home -work -office -school -lab => define context by must have none of the options
+$ task context <name of context> => switch or set context
+$ task context show || $ task _get rc.context => show current context
+$ task context list => list all contexts
+$ task context none => clear current context
+$ task context delete <name of context> => delete context
+// all reports that accept filters will use the context if one is defined
+
+

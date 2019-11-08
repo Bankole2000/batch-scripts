@@ -14,6 +14,8 @@ IF "%1"=="pirple" GOTO pirple
 IF "%1"=="lambda" GOTO lambda
 IF "%1"=="learning" GOTO learning
 IF "%1"=="pluralsight" GOTO pluralsight
+IF "%1"=="workmusic" GOTO workmusic
+IF "%1"=="labview" GOTO labview
 
 :scripts
   cd C:\apps\scripts
@@ -69,12 +71,20 @@ IF "%1"=="pluralsight" GOTO pluralsight
   clear
   GOTO end
 
+:labview
+  explorer "%programfiles%\National Instruments\LabVIEW 2019\"
+  GOTO end
+
 :getpic
   xcopy %localAppData%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets %USERPROFILE%\Pictures\images /D /Q
   cd %USERPROFILE%\Pictures\images
   ren *.* *.jpg
   explorer "%USERPROFILE%\Pictures\images"
-  
+  GOTO end
+
+:workmusic
+  open %USERPROFILE%\Videos\workmusic\playlist.xspf
+  cd %USERPROFILE%\Videos\workmusic%
   GOTO end
 
 :system
