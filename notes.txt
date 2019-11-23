@@ -10,6 +10,18 @@ CTRL + Tab => Move to next tab in chrome
 CTRL + Shift + Tab => Move to previous tab in chrome 
 Win + ";" => Emoji Picker
 Shift + F10 => Right click
+Alt + Left Arrow and Alt + Right Arrow => Move Back, forward one page in Chrome
+Ctrl + W => Close tab in chrome
+Ctrl + 1/2/3/4/5 => Open tab of specific number
+Ctrl + Shift + click => Open in a new tab
+Ctrl + Shift + N => New Incognito window
+Ctrl + L => Highlight URL Bar
+Space => Page down in Chrome
+Shift + SPace => Page up in chrome. 
+Alt + F => Chrome Menu options
+Ctrl + F => Find TExt
+Ctrl + Shift + J => View DOwnloads
+Ctrl + D => Add to Bookmarks
 
 To download videos from youtube
 youtube-dl <URL> -> download video from youtube
