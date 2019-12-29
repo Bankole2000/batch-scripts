@@ -1,4 +1,6 @@
 @ECHO OFF
+IF "%1"=="everything" GOTO everything
+IF "%1"=="user" GOTO user
 IF "%1"=="" GOTO bkupall
 IF "%1"=="work" GOTO work
 IF "%1"=="xprojects" GOTO xprojects
@@ -9,6 +11,7 @@ IF "%1"=="pictures" GOTO pictures
 IF "%1"=="websites" GOTO websites
 IF "%1"=="apps" GOTO apps
 IF "%1"=="scripts" GOTO scripts
+IF "%1"=="resources" GOTO resources
 IF "%1"=="help" GOTO help
 IF "%1"=="documents" GOTO documents
 IF "%1"=="all" GOTO all
@@ -32,12 +35,24 @@ IF "%1"=="getvids" GOTO getvids
   xcopy /D "%USERPROFILE%\Desktop\work" /e "D:\backup\work"
   GOTO end
 
+:everything
+  xcopy /D "C:\" /e "E:\" /J
+  GOTO end
+
+:user
+  xcopy /D "C:\Windows" /e "E:\Windows" /J /C
+  GOTO end
+
 :xprojects
   xcopy /D "C:\xampp\htdocs" /e "D:\backup\xprojects"
   GOTO end
 
 :projects
   xcopy /D "C:\projects" /e "D:\backup\projects"
+  GOTO end
+
+:resources
+  xcopy /D "C:\projects\resources\tools" /e "D:\backup\projects\resources\tools"
   GOTO end
 
 :downloads

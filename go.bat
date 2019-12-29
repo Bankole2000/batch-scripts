@@ -14,8 +14,12 @@ IF "%1"=="pirple" GOTO pirple
 IF "%1"=="lambda" GOTO lambda
 IF "%1"=="learning" GOTO learning
 IF "%1"=="pluralsight" GOTO pluralsight
+IF "%1"=="mws" GOTO mws
 IF "%1"=="workmusic" GOTO workmusic
 IF "%1"=="labview" GOTO labview
+IF "%1"=="wireshark" GOTO wireshark
+IF "%1"=="hosts" GOTO hosts
+IF "%1"=="editxampp" GOTO editxampp
 
 :scripts
   cd C:\apps\scripts
@@ -60,6 +64,11 @@ IF "%1"=="labview" GOTO labview
   cd C:\projects\learning\lambda\%2
   GOTO end
 
+:mws
+  cd C:\projects\learning\google\MWS
+  chrome https://developers.google.com/certification/mobile-web-specialist/study-guide/basic-layout
+  GOTO end
+
 :learning
   cd C:\projects\learning\%2
   GOTO end  
@@ -89,6 +98,18 @@ IF "%1"=="labview" GOTO labview
 
 :system
   cd C:\WINDOWS\system32\
+  GOTO end
+
+:wireshark
+  cd "C:\Program Files\Wireshark"
+  GOTO end
+
+:hosts
+  nano C:\Windows\System32\Drivers\etc\hosts
+  GOTO end
+
+:editxampp
+  nano C:\xampp\apache\conf\httpd.conf
   GOTO end
 
 :end
