@@ -2,6 +2,7 @@
 SET home=''
 SET drive=''
 IF "%1"=="scripts" GOTO scripts
+IF "%1"=="videos" GOTO videos
 IF "%1"=="work" GOTO work
 IF "%1"=="projects" GOTO projects
 IF "%1"=="home" GOTO home
@@ -20,6 +21,31 @@ IF "%1"=="labview" GOTO labview
 IF "%1"=="wireshark" GOTO wireshark
 IF "%1"=="hosts" GOTO hosts
 IF "%1"=="editxampp" GOTO editxampp
+IF "%1"=="help" GOTO help
+
+:help 
+  echo.
+  echo ======== go.bat script commands =========
+  echo.
+  echo   go scripts -- go to C:\apps\scripts
+  echo   go videos -- go to C:\projects\resources\videos
+  echo   go projects "any" -- go to C:\xampp\htdocs\projects\"any"
+  echo   go home "any" -- go to C:\Users\USERPC\"any"
+  echo   go work "any" -- go to C:\Users\USERPC\Desktop\work\"any"
+  echo   go drive "any" "any2" -- go to "any":\"any2"
+  echo   go explore "any" "any2" -- go to C:\"any" and open in explorer
+  echo   go kill "any" -- taskkill /im "any".exe /t /f
+  echo   go getpic "any" -- copy sign in image to C:\Users\USERPC\Pictures\images\"any"
+  echo   go system "any" -- go to C:\Windows\system32
+  echo   go workmusic "any" -- go to C:\Users\USERPC\Videos\workmusic and open playlist.xspf
+  echo   go learning "any" -- go to C:\projects\learning\"any"
+  echo   go pirple "any" -- go to C:\projects\learning\pirple\"any"
+  echo   go pluralsight "any" -- go to C:\projects\learning\pluralsight\"any"
+  echo   go mws "any" -- go to C:\projects\learning\google\MWS and open chrome webpage
+  echo   go hosts -- edit C:\Windows\System32\Drivers\etc\hosts in hosts
+  echo   go editxampp "any" -- edit C:\xampp\apache\conf\httpd.conf in nano
+  echo.
+  GOTO end
 
 :scripts
   cd C:\apps\scripts
@@ -73,6 +99,10 @@ IF "%1"=="editxampp" GOTO editxampp
   cd C:\projects\learning\%2
   GOTO end  
 
+:videos
+  cd C:\projects\resources\videos
+  GOTO end
+
 :kill 
   taskkill /im %2.exe /t /f
   IF "%2"=="explorer" (start explorer.exe)
@@ -93,7 +123,7 @@ IF "%1"=="editxampp" GOTO editxampp
 
 :workmusic
   open %USERPROFILE%\Videos\workmusic\playlist.xspf
-  cd %USERPROFILE%\Videos\workmusic%
+  cd %USERPROFILE%\Videos\workmusic\
   GOTO end
 
 :system

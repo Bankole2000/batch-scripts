@@ -1,6 +1,32 @@
 Useful Windows Shortcut keys
 Apiary.io token => db3d173cd11536a8d9947d0a8892dfc8
 
+WIN + A => Open Action Center
+WIN + B => Focus on TaskBar hidden icons 
+WIN + C => Cortana Listening Mode
+WIN + D => Display and hide the Desktop
+WIN + E => Open File Explorer 
+WIN + G => Open Game bar when a game is open 
+WIN + I => Open Settings
+WIN + K => Open the Connect Quick Action 
+WIN + L => Lock PC or switch Accounts
+WIN + M => Minimize all windows
+WIN + R => Open Run dialog Box
+WIN + S => Open Search
+WIN + T => Focus on Task bar
+WIN + Q => Start Menu Search
+WIN + U => Open Ease of Access Center
+WIN + X => Open Quick Link Menu 
+WIN + W => Open Windows Ink Workspace
+WIN + Number(1-9) => Open App from Task Bar
+WIN + "+" => Open Magnifier and Zoom in
+WIN + "-" => Open Magnifier and Zoom out
+
+Ctrl + D => Delete (Send to Recycle Bin)
+Ctrl + Shift + Esc => Open Task Manager
+
+Alt + PrtScr => Screenshot of the Window that is open
+
 WIN + CTRL + D => New Desktop 
 WIN + CTRL + F4 => Close Current Desktop
 WIN + CTRL + Left Arrow / Right Arrow => Switch between Desktops 
