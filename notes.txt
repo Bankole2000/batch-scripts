@@ -21,6 +21,7 @@ WIN + W => Open Windows Ink Workspace
 WIN + Number(1-9) => Open App from Task Bar
 WIN + "+" => Open Magnifier and Zoom in
 WIN + "-" => Open Magnifier and Zoom out
+Alt + Enter => View Properties of Highlighted Item in Explorer
 
 Ctrl + D => Delete (Send to Recycle Bin)
 Ctrl + Shift + Esc => Open Task Manager
@@ -55,3 +56,30 @@ youtube-dl --yes-playlist <URL?list=listcodenam> -> download video playlist from
 youtube-dl -F <URL> -> Get video formats (and audio)
 youtube-dl -f 250 <URL> -> download audio only from youtube video
 
+VS Code shortcuts
+Ctrl + \ => split screen
+Ctrl + 1, Ctrl + 2 etc => focus on first or second screen etc
+Ctrl + 0, focus on explorer panel
+Ctrl + P => opens search bar, you can type a file name or full path name
+Ctrl + tab, Ctrl + Shift + tab => switch between open files
+Alt + left, alt + right => switch directly to previous/next files in file history
+Ctrl + Shift + o => Show Code symbol/function outline
+Ctrl + t => search for function or variable
+Ctrl + g => go to line
+Ctrl + u => return cursor to former point before jump
+Ctrl + home, Ctrl + end => go to beginning or end of file
+F12 => go to definition of a function 
+Alt + F12 => Peek functon definition 
+Shift + F12 => Peek at function references
+F2 => Change all occurences of selected symbol / function 
+Alt + Shift + left / right => Select pieces of Code based on scope
+Ctrl + ` => Open terminal 
+Ctrl + Shift + ` => Open new Terminal 
+Ctrl + Shift + 5 => Split Terminal 
+Ctrl + ` => Focus on terminal from Editor
+Alt + left => Switch focus between split terminals
+Ctrl + Shift + F => Search through all files at once
+Ctrl + Shift + D => Duplicate line
+Ctrl + Shift + PageUp/PageDown => Move editor left or right
+Ctrl + Alt + Up, Down => add cursor above or below current cursor position
+Ctrl + W => Close current window
